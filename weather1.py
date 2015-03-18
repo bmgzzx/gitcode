@@ -1,4 +1,4 @@
-#coding:utf-8
+#coding:gbk
 #天气预报软件，调取百度接口
 import urllib2
 import json
@@ -18,15 +18,15 @@ city = unicode(city,'gbk')
 #变成utf-8的编码
 city = city.encode('utf8')
 content = weather(city)
+print content
 #声明变量
 lookday = content['date']
-print type(lookday)
-#lookday = lookday.encode('utf8')
-print lookday
+lookday = lookday.encode('gbk')
 results = content['results'][0]
 currentCity = results['currentCity']
-print '现在是：'+lookday+'***************您现在的城市是：s' 
-print results['weather_data'][3]['weather'] 
+currentCity = currentCity.encode('gbk')
+print type(currentCity)
+print '现在是：%s***************您现在的城市是：%s' %(lookday,currentCity)
 
 
 
