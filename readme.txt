@@ -1,4 +1,3 @@
-hi i start github 
-it is very cool
+hi i started github 
 git is a distributed version control system
 git is free software
